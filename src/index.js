@@ -7,13 +7,16 @@ const main = async () => {
         // 우리가 만든 서비스를 호출합니다.
         const result = await getSummary();
 
+        // 사용할 객체 미리 정리
+        const { base, date, rates } = result;
+
         // 결과 출력
-        console.log(`기준 통화 : ${result.base}`);
-        console.log(`업데이트 : ${result.date}`);
+        console.log(`기준 통화 : ${base}`);
+        console.log(`업데이트 : ${date}`);
         console.log('------------------------------');
 
         // 객체 안의 환율 정보를 출력합니다.
-        for (const [currency, rate] of Object.entries(result.rates)) {
+        for (const [currency, rate] of Object.entries(rates)) {
             console.log(`${currency}: ${rate.toLocaleString()}`);
         }
 
