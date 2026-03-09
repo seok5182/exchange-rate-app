@@ -5,11 +5,14 @@ import { fetchExchangeRates } from "../api/exchangeApi.js";
  * @param {string} baseCurrency - 기준 통화 (기본값 : 'USD')
  * @param {string[]} targetCurrencies - 보고 싶은 통화 목록
  */
-export const getSummary = async (baseCurrency = 'USD', targetCurrencies = ['KRW', 'JPY']) => {
+export const getSummary = async ({
+    baseCurrency = 'USD',
+    targetCurrencies = ['KRW', 'JPY']
+} = {}) => {
     try {
         // 1. API 호출 (앞서 만든 API 레이어를 사용합니다.)
         const data = await fetchExchangeRates(baseCurrency);
-        const rates = data.rates;
+        const { rates } = data;
 
         // 2. 필요한 데이터만 추출
         const summary = {
