@@ -17,7 +17,7 @@
 - [x] Step 5: API 통신 로직 구현 (`src/api/`)
 - [x] Step 6: 데이터 가공 및 서비스 로직 구현 (`src/services/`)
 - [x] Step 7: 애플리케이션 실행 및 로그 확인 (`src/index.js`)
-- [>] Step 8: 유틸리티 레이어 추가 및 환경 변수 도입 (진행 예정)
+- [x] Step 8: 유틸리티 레이어 추가 및 환경 변수/Config 도입 완료
 
 ## 💡 Knowledge Base (상세 학습 로그)
 
